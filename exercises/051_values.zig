@@ -87,7 +87,7 @@ pub fn main() void {
     // Let's assign the std.debug.print function to a const named
     // "print" so that we can use this new name later!
 
-    const print = ???;
+    const print = std.debug.print;
 
     // Now let's look at assigning and pointing to values in Zig.
     //
@@ -160,16 +160,16 @@ pub fn main() void {
     // it should add the specified amount to the supplied character's
     // experience points.
     //
-    print("XP before:{}, ", .{glorp.experience});
+    print("XP before:{}, ", .{glorp_access2.experience});
 
     // Fix 1 of 2 goes here:
-    levelUp(glorp, reward_xp);
+    levelUp(&glorp, reward_xp);
 
     print("after:{}.\n", .{glorp.experience});
 }
 
 // Fix 2 of 2 goes here:
-fn levelUp(character_access: Character, xp: u32) void {
+fn levelUp(character_access: *Character, xp: u32) void {
     character_access.experience += xp;
 }
 
