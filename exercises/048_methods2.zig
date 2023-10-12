@@ -2,6 +2,7 @@
 // Now that we've seen how methods work, let's see if we can help
 // our elephants out a bit more with some Elephant methods.
 //
+
 const std = @import("std");
 
 const Elephant = struct {
@@ -54,7 +55,7 @@ fn visitElephants(first_elephant: *Elephant) void {
 
         // This gets the next elephant or stops:
         // which method do we want here?
-        e = if (e.hasTail()) e.??? else break;
+        e = if (e.hasTail()) e.getTail() else break;
     }
 }
 

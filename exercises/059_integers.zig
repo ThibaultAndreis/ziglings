@@ -6,8 +6,7 @@
 //     const a2: u8 = 0x41;      // hexadecimal
 //     const a3: u8 = 0o101;     // octal
 //     const a4: u8 = 0b1000001; // binary
-//     const a5: u8 = 'A';       // ASCII code point literal
-//     const a6: u16 = 'Ȁ';      // Unicode code points can take up to 21 bits
+//     const a5: u8 = 'A';       // UTF-8 code point literal
 //
 // You can also place underscores in numbers to aid readability:
 //
