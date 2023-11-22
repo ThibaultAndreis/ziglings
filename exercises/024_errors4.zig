@@ -53,18 +53,13 @@ fn fixTooBig(n: u32) MyNumberError!u32 {
 }
 
 fn fixTooSmall(n: u32) MyNumberError!u32 {
-    // Oh dear, this is missing a lot! But ddon't worry, it's nearly
+    // Oh dear, this is missing a lot! But don't worry, it's nearly
     // identical to fixTooBig() above.
     //
     // If we get a TooSmall error, we should return 10.
     // If we get any other error, we should return that error.
-    // Otherwise, we return the u32 number.d
-    return detectProblems(n) catch |err| {
-        if (err == MyNumberError.TooSmall) {
-            return 10;
-        }
-        return err;
-    };
+    // Otherwise, we return the u32 number.
+    return detectProblems(n) ???;
 }
 
 fn detectProblems(n: u32) MyNumberError!u32 {

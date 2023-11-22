@@ -15,13 +15,9 @@
 //
 const std = @import("std");
 
-const Insect = union(enum) {
+const Insect = union(InsectStat) {
     flowers_visited: u16,
-    still_alive: bool
-};
-const strussct = struct {
-    totot: u8,
-    tata: u64,
+    still_alive: bool,
 };
 
 pub fn main() void {
