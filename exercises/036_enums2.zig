@@ -21,7 +21,6 @@ const std = @import("std");
 //     0xf (is the value 15 in hex)
 //
 // Web browsers let us specify colors using a hexadecimal
-
 // number where each byte represents the brightness of the
 // Red, Green, or Blue component (RGB) where two hex digits
 // are one byte with a value range of 0-255:
@@ -29,7 +28,11 @@ const std = @import("std");
 //     #RRGGBB
 //
 // Please define and use a pure blue value Color:
-const Color = enum(u32) { red = 0xff0000, green = 0x00ff00, blue = 0x0000FF };
+const Color = enum(u32) {
+    red = 0xff0000,
+    green = 0x00ff00,
+    blue = ???,
+};
 
 pub fn main() void {
     // Remember Zig's multi-line strings? Here they are again.
@@ -50,12 +53,12 @@ pub fn main() void {
         \\<p>
         \\  <span style="color: #{x:0>6}">Red</span>
         \\  <span style="color: #{x:0>6}">Green</span>
-        \\  <span style="color: #{x:0>6}">Blue</span>
+        \\  <span style="color: #{}">Blue</span>
         \\</p>
         \\
     , .{
         @intFromEnum(Color.red),
         @intFromEnum(Color.green),
-        @intFromEnum(Color.blue), // Oops! We're missing something!
+        @intFromEnum(???), // Oops! We're missing something!
     });
 }
