@@ -6,3 +6,4 @@
 /.idea
 .zig-cache/
 .wakatime-project
+.DS_Store
