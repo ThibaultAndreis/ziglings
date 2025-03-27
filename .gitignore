@@ -4,3 +4,5 @@
 /patches/healed/
 /output/
 /.idea
+.zig-cache/
+.wakatime-project
